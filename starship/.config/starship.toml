@@ -1,0 +1,26 @@
+# Füge eine Leerzeile zwischen den Eingabeaufforderungen ein
+add_newline = true
+
+# Ersetze das "❯" Symbol der Eingabeaufforderung mit "➜"
+[character]                            # Der Name des Moduls, welches wir konfigurieren ist "character"
+success_symbol = "[](bold green)"     # Das "succes_symbol" Segment wird zu "➜" eingestellt und ist "bold green" (fettgedrucktes grün) gefärbt
+error_symbol = "[✗](bold red)"
+vicmd_symbol = "[](bold red)"
+
+# Deaktiviere das "package" Modul, damit es aus der Eingabeaufforderung komplett verschwindet
+[package]
+disabled = true
+
+# ~/.config/starship.toml
+
+# Use custom format
+# format = """
+# [┌───────────────────>](bold green)
+# [│](bold green)$directory$rust$package
+# [└─>](bold green) """
+
+# # Wait 10 milliseconds for starship to check files under the current directory.
+# scan_timeout = 10
+
+# # Disable the blank line at the start of the prompt
+# add_newline = false

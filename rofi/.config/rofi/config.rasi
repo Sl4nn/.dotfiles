@@ -1,0 +1,96 @@
+configuration {
+  modi: "window,drun,ssh";
+    font: "JetBrainsMono Nerd Font 12";
+    yoffset: -100;
+    fixed-num-lines: false;
+    show-icons: true;
+    m: "-1";
+    display-window: "Windows";
+    display-drun: "Applications";
+    display-ssh: "ssh";
+    drun-display-format: "{icon} {name}";
+    sidebar-mode: true;
+    icon-theme: "Papirus";
+  }
+
+@theme "/dev/null"
+
+* {
+  bg: #32302f;
+  bg-alt: #665c54;
+
+  fg: #d4be98;
+  fg-alt: #a89984;
+
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+}
+
+element {
+  padding: 5 0;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 12;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  padding: 4 6;
+  background-color: @bg;
+  columns: 1;
+  lines: 5;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview, mode-switcher];
+}
+
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+mode-switcher {
+    background-color: inherit;
+}
+
+button {
+    text-color: @fg;
+}
+button.selected {
+    background-color: @bg-alt;
+    text-color:       @fg;
+}
+/* vim: ft=sass
